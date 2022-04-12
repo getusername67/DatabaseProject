@@ -2,7 +2,7 @@ body{
     margin: 0;
 }
 
-h1, h2{
+h2{
     font-family:"Amatica SC", cursive;
     text-align: center;
 }
@@ -14,7 +14,6 @@ p{
 header{
     background-color: skyblue;
     height: 150px;
-    text-align: center;
     color: #4f889f;
     padding: 1px;
 }
@@ -29,11 +28,19 @@ header{
     background-color: pink;
     width: 50%;
     float: left;
+    overflow: scroll;
 }
+
+
 
 .container div{
     padding: 1%;
+    height: 50%;
     box-sizing: border-box;
+}
+
+.container{
+    height: 800px;
 }
 
 footer{
@@ -41,9 +48,8 @@ footer{
     background-color: skyblue;
     text-align: center;
     height: 50px;
-    padding-top: 10px;
+    padding-top: 1px;
     box-sizing: border-box;
 }
-
 
 
