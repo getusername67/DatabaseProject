@@ -1,21 +1,20 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body{
     margin: 0;
 }
 
 h2{
-    font-family:"Amatica SC", cursive;
     text-align: center;
-}
-
-p{
-    font-family: "Open Sans Condensed";
 }
 
 header{
     background-color: skyblue;
     height: 150px;
     color: #4f889f;
-    padding: 1px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -46,11 +45,14 @@ header{
 }
 
 footer{
-    font-family:"Amatica SC", cursive;
     background-color: skyblue;
     text-align: center;
     padding: 1px;
     box-sizing: border-box;
+}
+
+nav{
+    padding-right: 50px;
 }
 
 
