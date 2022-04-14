@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action="/action_page.php">
+            <label for="evName">Event Name:</label>
+            <input type="text" id="evName" name="evName" required><br><br>
+            
+            <label for="eventType">Event Type:</label>
+            <select name="eventType" id="eventType">
+                <option value="public">Public</option>
+                <option value="private">Private</option>
+                <option value="rso">RSO</option>
+            </select><br><br>
+
+            <label for="desc">Event Description:</label>
+
+            <textarea id="desc" name="desc" rows="3" cols="50">
+            </textarea><br><br>
+
+            <label for="eventTime">Select a time:</label>
+            <input type="time" id="eventTime" name="eventTime" required><br><br>
+
+            <label for="eventDate">Event Date:</label>
+            <input type="date" id="eventDate" name="eventDate" required><br><br>
+
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br><br>
+
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
