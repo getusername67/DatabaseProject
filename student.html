@@ -40,7 +40,67 @@
 			<div class="centerCol">
 				<h2>Events</h2>
 				<p>
-					Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors. Bring a spring upon her cable holystone blow the man down spanker Shiver me timbers to go on account lookout wherry doubloon chase. Belay yo-ho-ho keelhaul squiffy black spot yardarm spyglass sheet transom heave to.
+					<ul class="eventListElement">
+						<li>
+							<h3>Event 1: Skydiving</h3>
+							<p>
+								Want to check off something from your bucket list? Come do the most daring of them all!
+							</p>
+							<p class="open-button" onclick="openForm()">Comment</p><br><br>
+							<div class="form-popup" id="myForm">
+								<form action="/action_page.php" class="form-container">
+								  <h4>Comment</h4>
+								  <textarea id="comment" name="comment" rows="3" cols="50">
+								  </textarea>
+							  
+								  <button type="submit" class="btn" onclick = "closeForm()">Submit</button>
+								  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+								</form>
+							</div>
+							<script>
+								function openForm() {
+  									document.getElementById("myForm").style.display = "block";
+								}
+								function closeForm() {
+  									document.getElementById("myForm").style.display = "none";
+								}
+							</script>
+						</li>
+						<li>
+							<h3>Event 2: Painting</h3>
+							<p>
+								Picasso in the making? Come paint with us and show us your best work!
+							</p>
+							<p class="open-button" onclick="openForm()">Comment</p><br><br>
+							<div class="form-popup" id="myForm">
+								<form action="/action_page.php" class="form-container">
+								  <h4>Comment</h4>
+								  <textarea id="comment" name="comment" rows="3" cols="50">
+								  </textarea>
+							  
+								  <button type="submit" class="btn" onclick = "closeForm()">Submit</button>
+								  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+								</form>
+							</div>
+						</li>
+						<li>
+							<h3>Event 3: Kayaking</h3>
+							<p>
+								Come kayak on econfina creek!
+							</p>
+							<p class="open-button" onclick="openForm()">Comment</p><br><br>
+							<div class="form-popup" id="myForm">
+								<form action="/action_page.php" class="form-container">
+								  <h4>Comment</h4>
+								  <textarea id="comment" name="comment" rows="3" cols="50">
+								  </textarea>
+							  
+								  <button type="submit" class="btn" onclick = "closeForm()">Submit</button>
+								  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+								</form>
+							</div>
+						</li>
+					</ul>
 				</p>
 			</div>
 			<div class="rightCol">
