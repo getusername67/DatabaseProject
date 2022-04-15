@@ -44,24 +44,28 @@
             </div>
 
             <script>
-                let markers = [];
+                
+
                 function initMap(){
+                    var oldMarker;
+                    var newMarker;
                     var location = {lat: 10, lng: 10};
                     var map = new google.maps.Map(document.getElementById("map"),{
                         zoom: 4,
                         center:location
-                    });
-                    google.maps.event.addListener(map, 'click', function (event) {                        
-                        var marker = new google.maps.Marker({
+                    });         
+                    google.maps.event.addListener(map, "click", (event) => {
+                        newMarker = new google.maps.Marker({
                             position: event.latLng,
                             map: map,
                         });
-                        markers = markers.unshift(marker);
-                        if(markers.length > 1){
-                            markers = markers.pop();
-                        }
-                    }
+                        oldMarker.setMap(null);
+                        oldMarker = null;
+                        oldMarker=newMarker;
+                    });    
+                    
                 }
+                window.initMap = initMap;
             </script>
             <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeCcAJMIU850c2cfVVwlQI4jVy282kp60&callback=initMap"></script>
 
