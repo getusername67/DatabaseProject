@@ -3,6 +3,12 @@
     <head>
         <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #map{
+                height: 600px;
+                width: 500px;
+            }
+        </style>
     </head>
     <body>
         <form action="/action_page.php">
@@ -33,7 +39,31 @@
             <label for="email">Enter your email:</label>
             <input type="email" id="email" name="email" required><br><br>
 
+            <div id="map">
 
+            </div>
+
+            <script>
+                let markers = [];
+                function initMap(){
+                    var location = {lat: 10, lng: 10};
+                    var map = new google.maps.Map(document.getElementById("map"),{
+                        zoom: 4,
+                        center:location
+                    });
+                    google.maps.event.addListener(map, 'click', function (event) {                        
+                        var marker = new google.maps.Marker({
+                            position: event.latLng,
+                            map: map,
+                        });
+                        markers = markers.unshift(marker);
+                        if(markers.length > 1){
+                            markers = markers.pop();
+                        }
+                    }
+                }
+            </script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeCcAJMIU850c2cfVVwlQI4jVy282kp60&callback=initMap"></script>
 
             <input type="submit" value="Submit">
         </form>
