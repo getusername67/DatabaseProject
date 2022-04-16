@@ -3,6 +3,7 @@ var username = "";
 var password = "";
 
 registerUser.addEventListener('click', e => {
+    userType = document.getElementById('userType').value;
     firstName = document.getElementById('fname').value;
     lastName = document.getElementById('lname').value;
     username = document.getElementById('userId').value;
