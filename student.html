@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<!--Written by Matthew Sanders-->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel = "stylesheet" href = "DBstyle.css">
+		<title>College Event Website</title>
+	</head>
+	
+	<body>
+		<header>
+			<span class="title">
+				<h1>College Events</h1>
+			</span>
+			<span class="navBar">
+				<nav>
+					<a href="DBProject.html">Public Events&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="student.html">Students&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="admin.html">Administrators&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="supAdmin.html">Super Administrators&nbsp&nbsp&nbsp&nbsp</a>
+					<a href="RSO.html">Create or Join an RSO&nbsp&nbsp&nbsp&nbsp</a>
+				</nav>
+			</span>
+		</header>
+		<div class = "container">
+			<div class="leftCol">
+				<h2>Info</h2>
+				<form action="/action_page.php">
+                    <label for="userId">User ID:</label>
+                    <input type="text" id="userId" name="userId" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <p>No user ID? Register <a href="register.html">here</a><br><br><br>
+					Want to create an event for anyone to come to? Click <a href="createEvent.html">here</a> </p>
+			</div>	
+			<div class="centerCol">
+				<h2>Events</h2>
+				<p>
+					<ul class="eventListElement">
+						<li>
+							<h3>Event 1: Skydiving</h3>
+							<p>
+								Want to check off something from your bucket list? Come do the most daring of them all!
+							</p>
+							<p class="open-button" onclick="openForm()">Comment</p><br><br>
+							<div class="form-popup" id="myForm">
+								<form action="/action_page.php" class="form-container">
+								  <h4>Comment</h4>
+								  <textarea id="comment" name="comment" rows="3" cols="50">
+								  </textarea>
+							  
+								  <button type="submit" class="btn" onclick = "closeForm()">Submit</button>
+								  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+								</form>
+							</div>
+							<script>
+								function openForm() {
+  									document.getElementById("myForm").style.display = "block";
+								}
+								function closeForm() {
+  									document.getElementById("myForm").style.display = "none";
+								}
+							</script>
+						</li>
+						<li>
+							<h3>Event 2: Painting</h3>
+							<p>
+								Picasso in the making? Come paint with us and show us your best work!
+							</p>
+							<p class="open-button" onclick="openForm()">Comment</p><br><br>
+							<div class="form-popup" id="myForm">
+								<form action="/action_page.php" class="form-container">
+								  <h4>Comment</h4>
+								  <textarea id="comment" name="comment" rows="3" cols="50">
+								  </textarea>
+							  
+								  <button type="submit" class="btn" onclick = "closeForm()">Submit</button>
+								  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+								</form>
+							</div>
+						</li>
+						<li>
+							<h3>Event 3: Kayaking</h3>
+							<p>
+								Come kayak on econfina creek!
+							</p>
+							<p class="open-button" onclick="openForm()">Comment</p><br><br>
+							<div class="form-popup" id="myForm">
+								<form action="/action_page.php" class="form-container">
+								  <h4>Comment</h4>
+								  <textarea id="comment" name="comment" rows="3" cols="50">
+								  </textarea>
+							  
+								  <button type="submit" class="btn" onclick = "closeForm()">Submit</button>
+								  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+								</form>
+							</div>
+						</li>
+					</ul>
+				</p>
+			</div>
+			<div class="rightCol">
+				<h2>Categories</h2>
+				<input type="checkbox" id="publicEv" name="publicEv" value="publicEv">
+				<label for="publicEv"> Public Events</label><br>
+				<input type="checkbox" id="privateEv" name="privateEv" value="privateEv">
+				<label for="privateEv"> Private Events</label><br>
+				<input type="checkbox" id="RSOEv" name="RSOEv" value="RSOEv">
+				<label for="RSOEv"> RSO Events</label><br>
+			</div>	
+		</div>
+
+		<footer>
+			<p>April 2022</p>
+		</footer>
+	</body>
+</html>
